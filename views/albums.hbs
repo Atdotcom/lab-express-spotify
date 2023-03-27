@@ -1,0 +1,15 @@
+<section>
+  <div id="albums">
+    {{#each albums}}
+        <h1>
+            {{this.name}}
+            </h1>
+            <img src="{{this.images.0.url}}" alt="{{this.name}}">
+            
+
+            {{!-- to see the tracks we need to provide the ID in the URL so it gets picked up by req.params in the route --}}
+            <a href="/tracks/{{this.id}}">View tracks</a>
+        
+    {{/each}}
+    </div>
+</section>
